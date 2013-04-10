@@ -301,7 +301,8 @@ function browse_Callback(hObject, eventdata, handles)
 % hObject    handle to browse (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-[filename, pathname] = uigetfile({'*.jpg;*.JPG;*.jpeg;*.JPEG','JPEG format (*.jpg;*.JPG;*.jpeg;*.JPEG)'},'Pick an image file...');
+[filename, pathname] = uigetfile({'*.jpg;*.JPG;*.jpeg;*.JPEG','JPEG format (*.jpg;*.JPG;*.jpeg;*.JPEG)';
+    '*.tif;*.tiff;*.TIF;*.TIFF','TIFF format (*.tif;*.tiff;*.TIF;*.TIFF)';'*.*','All files (*.*)'},'Pick an image file...');
 set(handles.inputFileName,'String',[pathname filename]);
 handles.pathname = pathname;
 handles.filename_short = filename;
